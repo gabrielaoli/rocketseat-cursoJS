@@ -10,13 +10,26 @@
 
 <body>
     <button id="botao">clique no botão</button>
-    
+
     <div id="quadrado"></div>
 
     <script>
 
-        var bot = document.getElementById("botao");
-        var esp = document.getElementById("quadrado");
+        var botE = document.getElementById("botao");
+        var quadE = document.getElementById("quadrado");
+
+        botE.onclick = function () {
+
+            var quadr = document.createElement("div");
+
+            quadr.style.width = '100px';
+            quadr.style.height = '100px';
+            quadr.style.backgroundColor = '#F00';
+            quadE.appendChild(quadr);
+
+
+        };
+
 
     </script>
 
