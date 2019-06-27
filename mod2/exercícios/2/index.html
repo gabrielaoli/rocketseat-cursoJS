@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ex 2 do Mod 2</title>
 </head>
+
 <body>
     <button id="botao">clique no botão</button>
 
@@ -17,13 +19,14 @@
         var quadE = document.getElementById("quadrado");
 
         function getRandomColor() {
-      var letters = '0123456789ABCDEF';
-      var color = '#';
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+
+            }
+            return color;
+        }
 
 
 
@@ -36,11 +39,20 @@
             quadr.style.backgroundColor = '#F00';
             quadE.appendChild(quadr);
 
+
+            quadr.onmouseover = function () {
+                quadr.style.backgroundColor = getRandomColor();
+            }
+            
+            quadE.appendChild(quadr);
+        
         };
+
 
 
     </script>
 
 </body>
 </body>
+
 </html>
