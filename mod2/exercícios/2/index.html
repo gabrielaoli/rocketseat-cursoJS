@@ -7,6 +7,40 @@
     <title>Ex 2 do Mod 2</title>
 </head>
 <body>
-    
+    <button id="botao">clique no botão</button>
+
+    <div id="quadrado"></div>
+
+    <script>
+
+        var botE = document.getElementById("botao");
+        var quadE = document.getElementById("quadrado");
+
+        function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+
+
+        botE.onclick = function () {
+
+            var quadr = document.createElement("div");
+
+            quadr.style.width = '100px';
+            quadr.style.height = '100px';
+            quadr.style.backgroundColor = '#F00';
+            quadE.appendChild(quadr);
+
+        };
+
+
+    </script>
+
+</body>
 </body>
 </html>
